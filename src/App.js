@@ -15,7 +15,7 @@ function App() {
       <TodoList>
           {
             taskList.map((task,index) =>(
-              <TodoItem name={task.name} key={index} />
+              <TodoItem name={task.name} key={index} completed={task.completed} />
             ))
           }
       </TodoList>

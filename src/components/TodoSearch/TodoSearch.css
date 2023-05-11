@@ -11,5 +11,7 @@
     background-color:#ECF0F1;
     font-size: 16px;
     font-weight: 200;
-    border-radius:3px
+    border-radius:3px;
+    outline-color: #212f3d;
+    box-shadow: 0 8px 8px -3px rgb(65, 65, 65);
 }

@@ -8,7 +8,7 @@ const CreateTodo = () =>{
     return(
         <div className='buttonContainer'>
             <button className='buttonContainer--item'>
-                <FontAwesomeIcon icon={faPlus} style={{width:'25px', height:'25px', color:'#212f3d'}}/>
+                <FontAwesomeIcon icon={faPlus}/>
             </button>
         </div>
     );

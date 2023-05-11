@@ -6,7 +6,35 @@
     justify-content: space-between;
     background-color: #212F3D;
     color: white;
-    font-weight:400;
+    font-weight:500;
     border-radius:30px 60px;
     box-shadow: 0 8px 8px -3px rgb(65, 65, 65);
+}
+
+
+.liContainer-delete{
+    width:20px;
+    height:20px; 
+    color:#ECF0F1;
+}
+
+.liContainer-delete:hover{
+    color:rgba(206, 0, 0, 0.973);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.liContainer-completed{
+    width:20px; 
+    height:20px; 
+    color:#ECF0F1;
+    cursor: pointer;
+}
+
+.liContainer-completed--complete{
+    color:rgb(33, 218, 64);
+}
+
+.taskCompleted{
+    text-decoration: line-through;
 }
