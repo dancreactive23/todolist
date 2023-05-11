@@ -1,0 +1,23 @@
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.buttonContainer--item{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 3px;
+    border-color:transparent;
+    border-radius: 100%;
+    text-align: center;
+    vertical-align:bottom;
+    transition: all 0.5s ease;
+    outline: none;
+    background-color:#ECF0F1;
+}
+
+.buttonContainer--item:hover{
+    transform: scale(1.2);
+}
+

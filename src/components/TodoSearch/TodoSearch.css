@@ -1,0 +1,15 @@
+.containerInput{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.containerInput__input{
+    margin: 0;
+    width: 50vh;
+    padding:10px;
+    background-color:#ECF0F1;
+    font-size: 16px;
+    font-weight: 200;
+    border-radius:3px
+}
