@@ -1,10 +1,10 @@
 import React from 'react';
 import './TodoSearch.css';
 
-const TodoSearch = () =>{
+const TodoSearch = ({onSearchTask}) =>{
     return(
         <div className='containerInput'>
-            <input className='containerInput__input' placeholder='Enter a task'/>
+            <input onChange={onSearchTask} className='containerInput__input' placeholder='Enter a task'/>
         </div>
     );
 }

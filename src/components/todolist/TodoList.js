@@ -1,10 +1,22 @@
 import React from "react";
+import TodoItem from "../TodoItem/TodoItem";
 
-const TodoList = (props) =>{
+
+const TodoList = ({tasksList,onCompleteTask,onDeleteTask}) =>{
     return(
         <>
             <ul>
-                {props.children}
+                {
+                    tasksList.map((task,index) =>(
+                        <TodoItem
+                            name={task.name} 
+                            key={index}
+                            completed={task.completed} 
+                            onCompleteTask={() => onCompleteTask(task.name)}
+                            onDeleteTask = {() => onDeleteTask(task.name)}
+                        />
+                    ))
+                }
             </ul>
         </>
     );
