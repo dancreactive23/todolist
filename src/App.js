@@ -3,24 +3,15 @@ import TodoCounter from './components/todoCounter/TodoCounter';
 import TodoSearch from './components/TodoSearch/TodoSearch';
 import TodoList from './components/todolist/TodoList';
 import CreateTodo from './components/CreateTodo/CreateTodo';
+import {useLocalStorage} from './useLocalStorage';
 import './App.css';
+
 
 function App() {
 
-  const taskListLocal = localStorage.getItem('taskList-v1');
-
-
-  let parsedTaskListLocal;
-
-  if(!taskListLocal){
-    localStorage.setItem('taskList-v1',JSON.stringify([]));
-    parsedTaskListLocal = [];
-  }else{
-    parsedTaskListLocal = JSON.parse(taskListLocal);
-  }
-
   const [searchTask, setSearchTask] = React.useState('');
-  const [todo,setTodo] = React.useState(parsedTaskListLocal);
+
+  const [todo,saveTodos] = useLocalStorage('taskList-v1',[]);
 
   const total = todo.length;
   const completedTodos = todo.filter(todo => todo.completed).length;
@@ -31,11 +22,6 @@ function App() {
 
   const onSearchTask = (event) =>{
     setSearchTask(event.target.value);
-  }
-
-  const saveTodos = (newTodo) =>{
-    localStorage.setItem('taskList-v1', JSON.stringify(newTodo));
-    setTodo(newTodo);
   }
 
   const onCompleteTask = (name) =>{
