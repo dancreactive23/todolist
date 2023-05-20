@@ -6,3 +6,4 @@ export const taskList = [
     {name:'task # 5', completed:false},
     {name:'task # 6', completed:false},
 ];
+
