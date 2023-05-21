@@ -1,9 +1,6 @@
 import React from 'react';
-import TodoCounter from './components/todoCounter/TodoCounter';
-import TodoSearch from './components/TodoSearch/TodoSearch';
-import TodoList from './components/todolist/TodoList';
-import CreateTodo from './components/CreateTodo/CreateTodo';
 import {useLocalStorage} from './useLocalStorage';
+import AppUI from './AppUI';
 import './App.css';
 
 
@@ -21,7 +18,7 @@ function App() {
   }
 
   const onSearchTask = (event) =>{
-    setSearchTask(event.target.value);
+    setSearchTask(event.target.value); 
   }
 
   const onCompleteTask = (name) =>{
@@ -51,12 +48,15 @@ function App() {
   ));
 
   return (
-    <>
-     <TodoCounter completed={completedTodos} total={total}/>
-     <TodoSearch onSearchTask={onSearchTask}/>
-      <TodoList tasksList={filteredTaskList} onCompleteTask={onCompleteTask} onDeleteTask={onDeleteTask} />
-      <CreateTodo onCreateTodo={onCreateTodo} />
-    </>
+    <AppUI 
+      completedTodos={completedTodos}
+      total={total}
+      onSearchTask={onSearchTask}
+      filteredTaskList={filteredTaskList}
+      onCompleteTask={onCompleteTask}
+      onDeleteTask={onDeleteTask}
+      onCreateTodo={onCreateTodo}
+    />
   );
 }
 
