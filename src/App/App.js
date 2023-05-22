@@ -8,7 +8,7 @@ function App() {
 
   const [searchTask, setSearchTask] = React.useState('');
 
-  const [todo,saveTodos] = useLocalStorage('taskList-v1',[]);
+  const {item:todo,saveItem:saveTodos,loading,error} = useLocalStorage('taskList-v1',[]);
 
   const total = todo.length;
   const completedTodos = todo.filter(todo => todo.completed).length;
@@ -47,8 +47,11 @@ function App() {
     task.name.toLowerCase().includes(searchTask.toLowerCase())
   ));
 
+
   return (
     <AppUI 
+      loading={loading}
+      error={error}
       completedTodos={completedTodos}
       total={total}
       onSearchTask={onSearchTask}
