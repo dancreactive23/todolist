@@ -1,0 +1,70 @@
+.container{
+    max-width: 670px; 
+    margin: 30px auto;
+    background:transparent; 
+}
+
+.background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	min-height: 100px;
+}
+
+.animate{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: loadingAnimation;
+    animation-timing-function: linear;
+    background: transparent;
+    background: linear-gradient(to right, #ECF0F1 8%, #dddddd 18%, #ECF0F1 33%);
+}
+
+.counter{
+    border-radius:30px 60px 90px; 
+    width:90%;
+    height: 80px;
+    margin-top: 12px;
+    border:1px solid #cecece;
+}
+
+.search{
+    margin-top:50px;
+    width:50vh;
+    height:42px;
+    border:1px solid #cecece;
+    border-radius: 3px;
+}
+
+.listContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.item{
+    width: 400px;
+    height:40px;
+    border:1px solid #cecece;
+    border-radius:30px 60px;
+    margin: 6px 0;
+}
+
+.createTask{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    border:1px solid #cecece;
+    margin: 30px;
+}
+
+@keyframes loadingAnimation{
+    0%{
+        background-position: -670px
+    }
+    100%{
+        background-position: 670px
+    }
+}
