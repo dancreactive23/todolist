@@ -3,7 +3,7 @@ import React from 'react';
 const ErrorTodos = () =>{
     return(
         <>
-            <p>Error occurred!!!</p>
+            <h1 style={{textAlign:'center'}}>Error occurred!!!</h1>
         </>
     );
 }

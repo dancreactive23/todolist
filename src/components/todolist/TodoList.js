@@ -1,8 +1,11 @@
 import React from "react";
 import TodoItem from "../TodoItem/TodoItem";
+import { TaskContext } from "../../TaskContext/TaskContext";
+import { useContext } from "react";
 
+const TodoList = () =>{
 
-const TodoList = ({tasksList,onCompleteTask,onDeleteTask,loading,error}) =>{
+    const{filteredTaskList:tasksList,onCompleteTask,onDeleteTask} = useContext(TaskContext);
     return(
         <>
             <ul>

@@ -1,9 +1,10 @@
 import React from 'react';
+import './TodosEmpty.css';
 
 const TodosEmpty = () =>{
     return(
         <>
-            <p>There is no task created. Please create a new one</p>
+            <h3 className='message'>There is no task created. Please create a new one</h3>
         </>
     );
 }

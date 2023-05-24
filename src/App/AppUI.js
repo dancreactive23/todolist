@@ -6,34 +6,44 @@ import CreateTodo from '../components/CreateTodo/CreateTodo';
 import LoadingTodos from '../components/LoadingTodos/LoadingTodos';
 import ErrorTodos from '../components/ErrorTodos/ErrorTodos';
 import TodosEmpty from '../components/TodosEmpty/TodosEmpty';
+import TaskModal from '../components/TaskModal/TaskModal';
+import {TaskContext} from '../TaskContext/TaskContext';
 
-const AppUI = ({
-    loading,
-    error,
-    completedTodos,
-    total,
-    onSearchTask,
-    filteredTaskList:tasksList,
-    onCompleteTask,
-    onDeleteTask,
-    onCreateTodo,
-}) =>{
+const AppUI = () =>{
+
     return(
         <>
-            {
-                loading ? <LoadingTodos/>:
-                <div>
-                    <TodoCounter completed={completedTodos} total={total}/>
-                    <TodoSearch onSearchTask={onSearchTask}/>
-                    <TodoList tasksList={tasksList} onCompleteTask={onCompleteTask} onDeleteTask={onDeleteTask} 
-                    loading={loading} error={error}
-                    />
-                    <CreateTodo onCreateTodo={onCreateTodo} />
-                </div>
-            }
-            {error && <ErrorTodos/>}
-            {(!loading && tasksList.lenght === 0) && <TodosEmpty/> }
+            <TaskContext.Consumer>
+                {({
+                    loading,
+                    error,
+                    total,
+                    onCreateTodo,
+                    openModal,
+                    setOpenModal,
+                }) =>
+                    error ? <ErrorTodos/>:
+                    (
+                    <>
+                        {
+                        loading ? <LoadingTodos/>:
+                        <div>
+                            <TodoCounter/>
+                            <TodoSearch/>
+                            {(!loading && total === 0) && <TodosEmpty/> }
+                            <TodoList/>
+                            <CreateTodo onCreateTodo={onCreateTodo} />
+                           {openModal && (
+                            <TaskModal>
+                                Open modal shows up!!!!!
+                            </TaskModal>
+                           )}
+                        </div>
+                        }
+                    </>
 
+                )}
+            </TaskContext.Consumer>
         </>
     );
 }
