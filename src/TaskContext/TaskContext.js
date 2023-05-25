@@ -45,6 +45,16 @@ const TaskProvider = ({children}) =>{
     const filteredTaskList = todo.filter(task =>(
       task.name.toLowerCase().includes(searchTask.toLowerCase())
     ));
+
+    const onAddTodo = (text) =>{
+      const newTodo = [...todo];
+      newTodo.push({
+        name:text,
+        completed:false,
+      });
+      saveTodos(newTodo);
+    }
+
     return(
         <TaskContext.Provider value={{
          loading,
@@ -58,6 +68,7 @@ const TaskProvider = ({children}) =>{
          onCreateTodo,
          openModal,
          setOpenModal,
+         onAddTodo,
         }}>
             {children}
         </TaskContext.Provider>

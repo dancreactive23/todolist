@@ -1,6 +1,6 @@
 import React from 'react';
 import reactDOM from 'react-dom';
-
+import './TaskModal.css';
 
 
 const TaskModal = ({children}) =>{

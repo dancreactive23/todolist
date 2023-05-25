@@ -8,6 +8,7 @@ import ErrorTodos from '../components/ErrorTodos/ErrorTodos';
 import TodosEmpty from '../components/TodosEmpty/TodosEmpty';
 import TaskModal from '../components/TaskModal/TaskModal';
 import {TaskContext} from '../TaskContext/TaskContext';
+import TaskForm from '../components/TaskForm/TaskForm';
 
 const AppUI = () =>{
 
@@ -32,10 +33,10 @@ const AppUI = () =>{
                             <TodoSearch/>
                             {(!loading && total === 0) && <TodosEmpty/> }
                             <TodoList/>
-                            <CreateTodo onCreateTodo={onCreateTodo} />
+                            <CreateTodo/>
                            {openModal && (
                             <TaskModal>
-                                Open modal shows up!!!!!
+                                <TaskForm/>
                             </TaskModal>
                            )}
                         </div>
