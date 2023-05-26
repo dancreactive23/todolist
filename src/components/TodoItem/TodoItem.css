@@ -45,3 +45,9 @@
 .taskCompleted{
     text-decoration: line-through;
 }
+
+@media(max-width:450px){
+   .liContainer{
+    width: 320px;
+   }
+}
