@@ -68,3 +68,15 @@
         background-position: 670px
     }
 }
+
+@media(max-width:450px){
+   .counter{
+    width:80%
+   }
+   .search{
+    width:38vh;
+   }
+   .item{
+    width: 300px;
+   }
+}
