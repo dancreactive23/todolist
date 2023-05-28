@@ -1,0 +1,36 @@
+.welcomeContainer{
+    text-align: center;
+    color:#D6EAF8;
+    margin-top: 36px;
+}
+
+.felizDia{
+    color:wheat;
+}
+
+.handIcon{
+    color:wheat;
+    animation-duration: 1.8s;
+    animation-fill-mode:both;
+    animation-iteration-count:infinite;
+    animation-name:sayingHi;
+    animation-timing-function:linear;
+    animation-direction: alternate;
+    rotate: 0deg;
+}
+
+.pencilIcon{
+    color:wheat;
+}
+
+@keyframes sayingHi{
+    0%{
+        rotate:-45deg;
+    }
+    50%{
+        rotate:0deg;
+    }
+    100%{
+        rotate:45deg;
+    }
+}

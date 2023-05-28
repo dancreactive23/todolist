@@ -3,20 +3,23 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #184664;
+    background-color: #154360;
     max-width: 350px;
     width: 90%;
     padding: 20px 40px;
     border-radius:30px 60px 90px;
-    position: fixed;
-    top:14vh;
+    position: relative;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
 }
 
 label{
-    color: white;
+    color: #F7F9F9;
     text-align:center;
     font-size:24px;
-    font-weight:500;
+    font-weight:700;
     margin-bottom: 12px;
 }
 
@@ -25,12 +28,13 @@ textarea{
     height: 80px;
     border: 2px #2874A6 solid;
     border-radius:6px;
-    background-color: #184664;
-    color:white;
+    background-color: #154360;
+    color:#F7F9F9;
     font-size: 16px;
     font-weight: 200;
-    outline: white;
+    outline: #F7F9F9;
     margin-bottom: 18px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .taskForm-container{
@@ -46,18 +50,21 @@ textarea{
     border: none;
     border-radius: 3px;
     cursor:pointer;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .taskForm-button--save{
-    background-color:rgb(33, 218, 64);
-    color:#212f3d;
-    font-weight:bold;
+    background-color:wheat;
+    color:#154360;
+    font-weight:700;
+    box-shadow: 0 8px 8px -9px wheat;
 }
 
 .taskForm-button--cancel{
     background-color:transparent;
-    border:solid 1px white;
-    color:white;
+    border:solid 1px #F7F9F9;
+    color:#F7F9F9;
+    font-weight:500;
 }
 
 @media(max-width:450px){
