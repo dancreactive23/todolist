@@ -1,0 +1,18 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ScrollContainer{
+    overflow-y: scroll;
+    border:1px solid #212f3d27;
+    border-radius:3px;
+    height: 350px;
+    display: inline-block;
+}
+
+.scrollHidden{
+    overflow-y: hidden;
+    border:none;
+}

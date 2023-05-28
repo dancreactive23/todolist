@@ -8,9 +8,9 @@ const TodoCounter = () =>{
     return(
         <div className='titleContainer'>
             <span className='titleContainer__title'> 
-              {`You have completed `}  
+              {`Has completado `}  
                 <span className='titleContainer--variant'> {completedTodos} </span> 
-                {` tasks of `} 
+                {` tareas de `} 
                  <span className='titleContainer--variant'> {total}</span>
             </span>
         </div>

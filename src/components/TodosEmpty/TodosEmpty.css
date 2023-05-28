@@ -1,6 +1,16 @@
+
+.emptyContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
 .message{
     margin: 0;
     padding: 0;
     text-align: center;
-    margin-top: 60px;
+    color:#F7F9F9;
 }
+
