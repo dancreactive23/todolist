@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/todolist/static/css/main.a829ad91.css",
-    "main.js": "/todolist/static/js/main.f9d1c187.js",
+    "main.css": "/todolist/static/css/main.8da2bd86.css",
+    "main.js": "/todolist/static/js/main.dbe53757.js",
+    "static/media/Todoapp-BG.svg": "/todolist/static/media/Todoapp-BG.41006c259243ab7a09c3.svg",
+    "static/media/Create task.svg": "/todolist/static/media/Create task.d5b9f686eb406b4d1c706164b82acc31.svg",
+    "static/media/notFound.svg": "/todolist/static/media/notFound.d94966bc9e1d73aa6591bdfe8f88a8bf.svg",
     "index.html": "/todolist/index.html",
-    "main.a829ad91.css.map": "/todolist/static/css/main.a829ad91.css.map",
-    "main.f9d1c187.js.map": "/todolist/static/js/main.f9d1c187.js.map"
+    "main.8da2bd86.css.map": "/todolist/static/css/main.8da2bd86.css.map",
+    "main.dbe53757.js.map": "/todolist/static/js/main.dbe53757.js.map"
   },
   "entrypoints": [
-    "static/css/main.a829ad91.css",
-    "static/js/main.f9d1c187.js"
+    "static/css/main.8da2bd86.css",
+    "static/js/main.dbe53757.js"
   ]
 }
